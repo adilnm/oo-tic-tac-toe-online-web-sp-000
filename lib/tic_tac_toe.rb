@@ -79,6 +79,33 @@ def full?()
   }
 end
 
+def draw?()
+  if(full?()&&!won?())
+    return true
+  else
+    return false
+  end
+end
+
+def over?()
+  if(won?()||draw?()||full?())
+    return true
+  else
+    return false
+  end
+  
+end
+
+def winner()
+  if(won?()==false)
+    return nil
+  elsif(@board[won?[0]]=="X")
+    return "X"
+    else(@board[won?[0]]=="O")
+    return "O"
+ 
+  end
+end
 
 
 end
